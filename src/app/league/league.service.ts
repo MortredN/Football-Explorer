@@ -17,7 +17,8 @@ export class LeagueService {
     {token: '73db4763234e4741aeb5e65834e4e811', isAvailable: true},
     {token: 'a1a0689a90464eb884d5e8b48782c5d7', isAvailable: true},
     {token: 'cd53b999fa594fa48f979ead7e309456', isAvailable: true},
-    {token: '347dcdd698c54c878f832856c8d524f0', isAvailable: true}
+    {token: '347dcdd698c54c878f832856c8d524f0', isAvailable: true},
+    {token: '697644213ee94d909086c723fdaab0fb', isAvailable: true}
   ]
   tokenIndex = 0;
 
