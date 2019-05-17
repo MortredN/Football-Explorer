@@ -1,0 +1,27 @@
+<table>
+  <tr>
+    <th>POS</th>
+    <th colspan="2">Team Name</th>
+    <th>MP</th>
+    <th>W</th>
+    <th>D</th>
+    <th>L</th>
+    <th>F</th>
+    <th>A</th>
+    <th>GD</th>
+    <th>P</th>
+  </tr>
+  <tr *ngFor="let team of table" class="team-{{team.sameTeam}}">
+    <td>{{team.position}}</td>
+    <td><a href="/team/{{team.teamId}}"><img src={{team.teamCrestUrl}} height="40"></a></td>
+    <td><a href="/team/{{team.teamId}}">{{team.teamName}}</a></td>
+    <td>{{team.matchPlayed}}</td>
+    <td>{{team.wins}}</td>
+    <td>{{team.draws}}</td>
+    <td>{{team.loses}}</td>
+    <td>{{team.goalsFor}}</td>
+    <td>{{team.goalsAgainst}}</td>
+    <td>{{team.goalsDifference}}</td>
+    <td>{{team.points}}</td>
+  </tr>
+</table>

@@ -1,0 +1,19 @@
+<div id="sidebar">
+  <nav id="league-sidebar" class="navbar navbar-expand-md bg-light navbar-light">
+    <p class="navbar-brand">Leagues & Cups</p>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="collapsibleNavbar">
+      <table>
+        <tr *ngFor="let competition of competitions">
+          <td>
+            <a href="/league/{{competition.id}}">
+              <img src={{competition.areaFlagUrl}} height="30"> {{competition.name.toUpperCase()}}
+            </a>
+          </td>
+        </tr>
+      </table>
+    </div>  
+  </nav>
+</div>

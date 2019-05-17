@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-md-3">
+    <app-leaguenav></app-leaguenav>
+  </div>
+  <div class="col-md-9">
+    <div class="row">
+      <span class="col span-navigate-div" (click)="spanNavigate('ereyesterday')">{{strEreyesterday}}</span>
+      <span class="col span-navigate-div" (click)="spanNavigate('yesterday')">{{strYesterday}}</span>
+      <span class="col span-navigate-div" (click)="spanNavigate('today')">{{strToday}}</span>
+      <span class="col span-navigate-div" (click)="spanNavigate('tomorrow')">{{strTomorrow}}</span>
+      <span class="col span-navigate-div" (click)="spanNavigate('overmorrow')">{{strOvermorrow}}</span>
+    </div>
+    <div *ngFor="let date of homePageDates" class="matches-div" id="div-{{date.name}}">
+      <table>
+        <tr class="navigate-row" *ngFor="let match of date.matches" (click)="navigateToMatch(match.matchId)">
+          <td>{{match.time}}</td>
+          <td><img src={{match.homeTeamCrestUrl}} height="30"></td>
+          <td>{{match.homeTeamName}}</td>
+          <td *ngIf="match.status == 'SCHEDULED'">VS</td>
+          <td *ngIf="match.status != 'SCHEDULED'">{{match.ftHomeScore}} - {{match.ftAwayScore}}</td>
+          <td>{{match.awayTeamName}}</td>
+          <td><img src={{match.awayTeamCrestUrl}} height="30"></td>
+          <td>{{match.date}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

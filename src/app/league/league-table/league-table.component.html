@@ -1,0 +1,60 @@
+<table *ngIf="!(leagueIdsWithGroupTables.includes(leagueId))">
+  <tr>
+    <th>POS</th>
+    <th colspan="2">Team Name</th>
+    <th>MP</th>
+    <th>W</th>
+    <th>D</th>
+    <th>L</th>
+    <th>F</th>
+    <th>A</th>
+    <th>GD</th>
+    <th>P</th>
+  </tr>
+  <tr *ngFor="let team of table">
+    <td>{{team.position}}</td>
+    <td><a href="#" [routerLink]="['/team', team.teamId]"><img src={{team.teamCrestUrl}} height="40"></a></td>
+    <td><a href="#" [routerLink]="['/team', team.teamId]">{{team.teamName}}</a></td>
+    <td>{{team.matchPlayed}}</td>
+    <td>{{team.wins}}</td>
+    <td>{{team.draws}}</td>
+    <td>{{team.loses}}</td>
+    <td>{{team.goalsFor}}</td>
+    <td>{{team.goalsAgainst}}</td>
+    <td>{{team.goalsDifference}}</td>
+    <td>{{team.points}}</td>
+  </tr>
+</table>
+
+<div *ngIf="leagueIdsWithGroupTables.includes(leagueId)">
+  <table *ngFor="let standing of groupTables">
+    <tr>
+      <th colspan="11">{{standing.groupName}}</th>
+    </tr>
+    <tr>
+      <th>POS</th>
+      <th colspan="2">Team Name</th>
+      <th>MP</th>
+      <th>W</th>
+      <th>D</th>
+      <th>L</th>
+      <th>F</th>
+      <th>A</th>
+      <th>GD</th>
+      <th>P</th>
+    </tr>
+    <tr *ngFor="let team of standing.table">
+      <td>{{team.position}}</td>
+      <td><a href="#" [routerLink]="['/team', team.teamId]"><img src={{team.teamCrestUrl}} height="40"></a></td>
+      <td><a href="#" [routerLink]="['/team', team.teamId]">{{team.teamName}}</a></td>
+      <td>{{team.matchPlayed}}</td>
+      <td>{{team.wins}}</td>
+      <td>{{team.draws}}</td>
+      <td>{{team.loses}}</td>
+      <td>{{team.goalsFor}}</td>
+      <td>{{team.goalsAgainst}}</td>
+      <td>{{team.goalsDifference}}</td>
+      <td>{{team.points}}</td>
+    </tr>
+  </table>
+</div>

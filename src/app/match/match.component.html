@@ -1,0 +1,65 @@
+<div class="row">
+  <div class="col-md-3">
+    <app-leaguenav></app-leaguenav>
+  </div>
+  <div class="col-md-9" *ngFor="let info of matchInfo">
+    <table>
+      <tr>
+        <td class="navigateTeam" [routerLink]="['/team', info.homeTeamId]"><img src={{info.homeTeamCrestUrl}} height="160"></td>
+        <td *ngIf="info.status == 'SCHEDULED'"><h1>VS</h1></td>
+        <td *ngIf="info.status != 'SCHEDULED'"><h1>{{info.ftHomeScore}} - {{info.ftAwayScore}}</h1></td>
+        <td class="navigateTeam" [routerLink]="['/team', info.awayTeamId]"><img src={{info.awayTeamCrestUrl}} height="160"></td>
+      </tr>
+      <tr>
+        <td class="navigateTeam" [routerLink]="['/team', info.homeTeamId]">
+          <h1>{{info.homeTeamName}}</h1>
+          <table><tr><td *ngFor="let homeResult of info.homeRecentPerformance" class="result-{{homeResult}}">{{homeResult}}</td></tr></table>
+        </td>
+        <td>
+          <h3>{{info.time}}</h3>
+          <h4>{{info.date}}</h4>
+          <h5>{{info.competitionName}}</h5>
+        </td>
+        <td class="navigateTeam" [routerLink]="['/team', info.awayTeamId]">
+          <h1>{{info.awayTeamName}}</h1>
+          <table><tr><td *ngFor="let awayResult of info.awayRecentPerformance" class="result-{{awayResult}}">{{awayResult}}</td></tr></table>
+        </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <th colspan="3">HEAD TO HEAD STATS</th>
+      </tr>
+      <tr>
+        <td>
+          <h3>{{info.h2hHomeWins}}</h3>
+          <h5>WINS</h5>
+        </td>
+        <td>
+          <h3>{{info.h2hDraws}}</h3>
+          <h5>DRAWS</h5>
+        </td>
+        <td>
+          <h3>{{info.h2hAwayWins}}</h3>
+          <h5>WINS</h5>
+        </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <th colspan="7">HEAD TO HEAD MATCHES THIS SEASON</th>
+      </tr>
+      <tr *ngFor="let h2hMatch of info.h2hMatches">
+        <td>{{h2hMatch.h2hTime}}</td>
+        <td><img src={{h2hMatch.h2hHomeTeamCrestUrl}} height="30"></td>
+        <td>{{h2hMatch.h2hHomeTeamName}}</td>
+        <td *ngIf="h2hMatch.h2hStatus == 'SCHEDULED'">VS</td>
+        <td *ngIf="h2hMatch.h2hStatus != 'SCHEDULED'">{{h2hMatch.h2hFtHomeScore}} - {{h2hMatch.h2hFtAwayScore}}</td>
+        <td>{{h2hMatch.h2hAwayTeamName}}</td>
+        <td><img src={{h2hMatch.h2hAwayTeamCrestUrl}} height="30"></td>
+        <td>{{h2hMatch.h2hDate}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+  

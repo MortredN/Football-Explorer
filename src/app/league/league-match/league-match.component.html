@@ -1,0 +1,29 @@
+<table>
+  <tr class="navigate-row" *ngFor="let match of liveMatches" (click)="navigateToMatch(match.matchId)">
+    <td>LIVE</td>
+    <td><img src={{match.homeTeamCrestUrl}} height="30"></td>
+    <td>{{match.homeTeamName}}</td>
+    <td>{{match.ftHomeScore}} - {{match.ftAwayScore}}</td>
+    <td>{{match.awayTeamName}}</td>
+    <td><img src={{match.awayTeamCrestUrl}} height="30"></td>
+    <td>{{match.date}}</td>
+  </tr>
+  <tr class="navigate-row" *ngFor="let match of scheduledMatches" (click)="navigateToMatch(match.matchId)">
+    <td>{{match.time}}</td>
+    <td><img src={{match.homeTeamCrestUrl}} height="30"></td>
+    <td>{{match.homeTeamName}}</td>
+    <td>VS</td>
+    <td>{{match.awayTeamName}}</td>
+    <td><img src={{match.awayTeamCrestUrl}} height="30"></td>
+    <td>{{match.date}}</td>
+  </tr>
+  <tr class="navigate-row" *ngFor="let match of finishedMatches" (click)="navigateToMatch(match.matchId)">
+    <td>FT</td>
+    <td><img src={{match.homeTeamCrestUrl}} height="30"></td>
+    <td>{{match.homeTeamName}}</td>
+    <td>{{match.ftHomeScore}} - {{match.ftAwayScore}}</td>
+    <td>{{match.awayTeamName}}</td>
+    <td><img src={{match.awayTeamCrestUrl}} height="30"></td>
+    <td>{{match.date}}</td>
+  </tr>
+</table>

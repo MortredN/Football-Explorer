@@ -1,0 +1,15 @@
+.span-navigate-div{
+    cursor: pointer;
+}
+
+.matches-div {
+    display: none;
+}
+
+#div-today {
+    display: block;
+}
+
+.navigate-row{
+    cursor: pointer;
+}
