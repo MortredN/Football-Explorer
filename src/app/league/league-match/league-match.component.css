@@ -1,3 +1,64 @@
+.table{
+    width: 100%;
+}
+
 .navigate-row {
     cursor: pointer;
+    vertical-align: middle;
+    height: 40px;
+    -webkit-transition: background-color 0.25s;
+    -moz-transition: background-color 0.25s;
+    -o-transition: background-color 0.25s;
+    transition: background-color 0.25s;
+}
+
+.navigate-row:hover{
+    background-color: #DADADA;
+}
+
+.row-live{
+    background-color: #98FB98;
+}
+
+.row-scheduled{
+    background-color: #F2F2F2;
+}
+
+.row-finished{
+    background-color: #FFFFFF;
+}
+
+#home-team-cell{
+    text-align: right;
+}
+
+#away-team-cell{
+    text-align: left;
+}
+
+#score-cell{
+    width: 100px;
+}
+
+#date-cell{
+    width: 100px;
+    text-align: right;
+}
+
+#time-cell{
+    width: 100px;
+    text-align: left;
+}
+
+#live-cell{
+    width: 100px;
+    text-align: left;
+    font-weight: 600;
+    color: #29AD29;
+}
+
+#ft-cell{
+    width: 100px;
+    text-align: left;
+    font-weight: 600;
 }

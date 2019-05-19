@@ -1,35 +1,37 @@
-<div class="row">
-  <div class="col-md-3">
+<div id="main" class="row">
+  <div class="col-lg-3">
       <app-leaguenav></app-leaguenav>
   </div>
-  <div class="col-md-6">
+  <div id="league-div" class="col-lg-6">
     <div id="league-title" *ngFor="let info of leagueInfo">
-      <img src={{info.leagueAreaFlagUrl}} height="80">
+      <img class="league-areaflag" src={{info.leagueAreaFlagUrl}} height="80">
       <h1>{{info.leagueName}}</h1>
     </div>
     <div class="row">
-      <a class="col-6" href="#" [routerLink]="['league-table']">
-        <span id="league-table-span">Table</span>
+      <div class="col-2"></div>
+      <a id="span-league-table" class="league-a col-4" href="#" [routerLink]="['league-table']" (click)="spanLeagueClick('table')">
+        <span class="league-span">Table</span>
       </a>
-      <a class="col-6" href="#" [routerLink]="['league-match']">
-        <span id="league-match-span">Matches</span>
+      <a id="span-league-matches" class="league-a col-4" href="#" [routerLink]="['league-match']" (click)="spanLeagueClick('matches')">
+        <span class="league-span">Matches</span>
       </a>
+      <div class="col-2"></div>
     </div>
     <router-outlet></router-outlet>
   </div>
-  <div class="col-md-3">
-    <table>
+  <div class="col-lg-3" id="top-scorer-div">
+    <table class="table-striped">
       <tr>
-        <th colspan="3">Top Scorers</th>
+        <th colspan="3"><h5>Top Scorers</h5></th>
       </tr>
-      <tr>
-        <th colspan="2">Player Name</th>
-        <th>Goals</th>
+      <tr class="scorer-row">
+        <th id="team-name-label" colspan="2">Player Name</th>
+        <th id="player-goals">Goals</th>
       </tr>
-      <tr *ngFor="let scorer of topScorers">
-        <td><img src={{scorer.teamCrestUrl}} height="30"></td>
-        <td>{{scorer.playerName}}</td>
-        <td>{{scorer.goals}}</td>
+      <tr class="scorer-row" *ngFor="let scorer of topScorers">
+        <td id="team-crest"><img src={{scorer.teamCrestUrl}} onError="this.src='assets/img/unknown-team-crest.png';" height="30"></td>
+        <td id="player-name">{{scorer.playerName}}</td>
+        <td id="player-goals">{{scorer.goals}}</td>
       </tr>
     </table>
   </div>

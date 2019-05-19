@@ -1,14 +1,70 @@
+#main{
+    margin-right: 0;
+}
+
+#team-div{
+    text-align: center;
+    align-content: center;
+    padding-top: 15px;
+}
+
+#team-title a{
+    color: rgba(0,0,0,.9);
+}
+
+#team-title a:hover{
+    color: #343A40;
+}
+
+.result-container{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.result-table{
+    border-spacing: 10px;
+    border-collapse: separate;
+}
+
 .result-W{
     background-color: #009F3B;
     color: #FFFFFF;
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+    font-size: 20px;
+    border-radius: 10px;
 }
 
 .result-L{
     background-color: #E00024;
     color: #FFFFFF;
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+    font-size: 20px;
+    border-radius: 10px;
 }
 
 .result-D{
     background-color: #444444;
     color: #FFFFFF;
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.team-a{
+    color: rgba(0,0,0,.9);
+    border: 2px solid rgba(0,0,0,.9);
+    padding: 5px, 0;
+    margin-bottom: 15px;
+}
+
+.team-span{
+    font-size: 1.25rem;
+    font-weight: 500;
 }

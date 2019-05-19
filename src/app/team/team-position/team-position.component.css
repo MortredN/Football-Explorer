@@ -1,8 +1,67 @@
-.team-same{
-    background-color: #444444;
+.table-striped{
+    width: 100%;
+}
+
+tr{
+    height: 50px;
+    -webkit-transition: background-color 0.25s;
+    -moz-transition: background-color 0.25s;
+    -o-transition: background-color 0.25s;
+    transition: background-color 0.25s;
+}
+
+tr:hover, tr:nth-of-type(odd):hover {
+    background-color: #D6D7D8;
+    color: rgba(0,0,0,.9);
+}
+
+tr:first-child:hover{
+    background-color: #F2F2F2;
+}
+
+tr.team-same:hover, tr.team-same:nth-of-type(odd):hover{
+    background-color: #1A1D20;
+    color: #FFFFFF;
+}
+
+.table-num{
+    width: 45px;
+}
+
+#team-name-label{
+    text-align: left;
+    padding-left: 30px;
+}
+
+#team-name{
+    text-align: left;
+}
+
+tr.team-same, tr.team-same:nth-of-type(odd){
+    background-color: #343A40;
     color: #FFFFFF;
 }
 
 .team-different{
-    color: #000000;
+    color: rgba(0,0,0,.9);
+}
+
+#team-name a{
+    color: rgba(0,0,0,.9);
+}
+
+.team-same #team-name a{
+    color: #FFFFFF;
+}
+
+#team-name a:hover{
+    color: #343A40;
+}
+
+#team-crest{
+    width: 100px;
+}
+
+#team-points{
+    font-weight: 600;
 }

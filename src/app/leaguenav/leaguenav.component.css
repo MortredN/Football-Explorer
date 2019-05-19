@@ -1,3 +1,42 @@
 .navbar{
     display: block;
+    padding: 0;
+}
+
+.leaguenav-table{
+    width: 100%;
+}
+
+.leaguenav-row{
+    border-bottom: 1px solid rgba(0,0,0,.9);
+}
+
+.leaguenav-head{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgba(0,0,0,.9);
+    padding: 15px 30px;
+}
+
+.leaguenav-cell{
+    display: block;
+    height: 100%;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: rgba(0,0,0,.9);
+    -webkit-transition: background-color 0.4s, color 0.4s;
+    -moz-transition: background-color 0.4s, color 0.4s;
+    -o-transition: background-color 0.4s, color 0.4s;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+.leaguenav-cell:hover{
+    background-color: #343A40;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.leaguenav-flag{
+    margin: 10px 20px;
 }

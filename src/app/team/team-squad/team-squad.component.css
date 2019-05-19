@@ -1,0 +1,9 @@
+.table-striped{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+tr{
+    height: 30px;
+}

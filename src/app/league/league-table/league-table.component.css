@@ -1,0 +1,48 @@
+.table-striped{
+    width: 100%;
+}
+
+tr{
+    height: 50px;
+    -webkit-transition: background-color 0.25s;
+    -moz-transition: background-color 0.25s;
+    -o-transition: background-color 0.25s;
+    transition: background-color 0.25s;
+}
+
+tr:hover, tr:nth-of-type(odd):hover {
+    background-color: #D6D7D8;
+}
+
+tr:first-child:hover{
+    background-color: #F2F2F2;
+}
+
+.table-num{
+    width: 45px;
+}
+
+#team-name-label{
+    text-align: left;
+    padding-left: 30px;
+}
+
+#team-name{
+    text-align: left;
+}
+
+#team-name a{
+    color: rgba(0,0,0,.9);
+}
+
+#team-name a:hover{
+    color: #343A40;
+}
+
+#team-crest{
+    width: 100px;
+}
+
+#team-points{
+    font-weight: 600;
+}

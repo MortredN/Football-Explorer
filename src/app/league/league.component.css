@@ -1,0 +1,64 @@
+#main{
+    margin-right: 0;
+}
+
+#league-div{
+    padding-top: 15px;
+    text-align: center;
+}
+
+.league-areaflag{
+    padding: 5px;
+}
+
+.league-a{
+    color: rgba(0,0,0,.9);
+    background-color: #FFFFFF;
+    border: 2px solid rgba(0,0,0,.9);
+    padding: 5px, 0;
+    margin-bottom: 15px;
+    -webkit-transition: background-color 0.4s, color 0.4s;
+    -moz-transition: background-color 0.4s, color 0.4s;
+    -o-transition: background-color 0.4s, color 0.4s;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+.league-a:hover{
+    text-decoration: none;
+}
+
+.league-span{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.table-striped{
+    width: 100%;
+    text-align: center;
+}
+
+#top-scorer-div{
+    padding-right: 0;
+}
+
+.scorer-row{
+    height: 40px;
+}
+
+#team-name-label{
+    text-align: left;
+    padding-left: 30px;
+}
+
+#player-name{
+    text-align: left;
+}
+
+#team-crest{
+    width: 50px;
+}
+
+#player-goals{
+    padding-right: 10px;
+    font-weight: 500;
+}

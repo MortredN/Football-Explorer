@@ -1,18 +1,132 @@
+#main{
+    margin-right: 0;
+}
+
+#match-div{
+    text-align: center;
+    align-content: center;
+    padding-top: 15px;
+}
+
+#match-info-table-container{
+    padding: 15px 35px;
+}
+
+#match-info-table{
+    width: 100%;
+    border: 2px solid rgba(135, 135, 135, 0.9);
+    border-collapse: separate !important;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+#h2h-stats-table{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#h2h-matches-table{
+    width: 100%;
+}
+
+.match-cell{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.result-container{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.result-table{
+    border-spacing: 10px;
+    border-collapse: separate;
+}
+
 .result-W{
     background-color: #009F3B;
     color: #FFFFFF;
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+    font-size: 20px;
+    border-radius: 7px;
 }
 
 .result-L{
     background-color: #E00024;
     color: #FFFFFF;
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+    font-size: 20px;
+    border-radius: 7px;
 }
 
 .result-D{
     background-color: #444444;
     color: #FFFFFF;
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+    font-size: 20px;
+    border-radius: 7px;
 }
 
 .navigateTeam{
     cursor: pointer;
+}
+
+.h2h-row{
+    vertical-align: middle;
+    height: 40px;
+}
+
+#home-team-cell{
+    text-align: right;
+}
+
+#away-team-cell{
+    text-align: left;
+}
+
+#score-cell{
+    width: 100px;
+}
+
+#date-cell{
+    width: 100px;
+    text-align: right;
+}
+
+#time-cell{
+    width: 100px;
+    text-align: left;
+}
+
+@media (max-width: 767px) {
+    .hidden-xs {
+      display: none !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .hidden-sm {
+        display: none !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .hidden-md {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hidden-lg {
+        display: none !important;
+    }
 }

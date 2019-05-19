@@ -1,5 +1,26 @@
+#main{
+    margin-right: 0;
+}
+
+#home-div{
+    text-align: center;
+    padding-right: 30px;
+    padding-top: 15px;
+}
+
 .span-navigate-div{
     cursor: pointer;
+    color: rgba(0,0,0,.9);
+    background-color: #FFFFFF;
+    border: 2px solid rgba(0,0,0,.9);
+    padding: 5px, 0;
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    -webkit-transition: background-color 0.4s, color 0.4s;
+    -moz-transition: background-color 0.4s, color 0.4s;
+    -o-transition: background-color 0.4s, color 0.4s;
+    transition: background-color 0.4s, color 0.4s;
 }
 
 .matches-div {
@@ -10,6 +31,42 @@
     display: block;
 }
 
+.table{
+    width: 100%;
+}
+
 .navigate-row{
     cursor: pointer;
+    vertical-align: middle;
+    height: 40px;
+    -webkit-transition: background-color 0.25s;
+    -moz-transition: background-color 0.25s;
+    -o-transition: background-color 0.25s;
+    transition: background-color 0.25s;
+}
+
+.navigate-row:hover{
+    background-color: #EAEBEB;
+}
+
+#home-team-cell{
+    text-align: right;
+}
+
+#away-team-cell{
+    text-align: left;
+}
+
+#score-cell{
+    width: 100px;
+}
+
+#date-cell{
+    width: 100px;
+    text-align: right;
+}
+
+#time-cell{
+    width: 100px;
+    text-align: left;
 }

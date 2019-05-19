@@ -16,7 +16,6 @@ export class HomeComponent implements OnInit {
   strTomorrow: string;
   strOvermorrow: string;
   homePageDates: HomePageDate[];
-  
 
   constructor(private homeService: HomeService, private router: Router) { }
 
@@ -28,6 +27,10 @@ export class HomeComponent implements OnInit {
     this.strOvermorrow = this.getStrDate(2);
 
     this.homePageDates = this.homeService.fetchMatches();
+    $('#span-today').css(
+      {"color": "#FFFFFF",
+      "background-color": "#343A40"}
+    )
   }
 
   getStrDate(days: number){
@@ -38,7 +41,15 @@ export class HomeComponent implements OnInit {
 
   spanNavigate(spanName: string){
     $('.matches-div').hide();
+    $('.span-navigate-div').css(
+      {"color": "rgba(0,0,0,.9)",
+      "background-color": "#FFFFFF"}
+    )
     $('#div-' + spanName).show();
+    $('#span-' + spanName).css(
+      {"color": "#FFFFFF",
+      "background-color": "#343A40"}
+    )
   }
 
   navigateToMatch(matchId: number){

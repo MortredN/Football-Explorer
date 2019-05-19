@@ -1,3 +1,15 @@
 .navigate-tbody {
     cursor: pointer;
 }
+
+.table{
+    width: 100%;
+}
+
+.left-cell{
+    text-align: left;
+}
+
+.right-cell{
+    text-align: right;
+}

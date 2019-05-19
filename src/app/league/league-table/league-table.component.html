@@ -1,7 +1,7 @@
-<table *ngIf="!(leagueIdsWithGroupTables.includes(leagueId))">
+<table class="table-striped" *ngIf="!(leagueIdsWithGroupTables.includes(leagueId))">
   <tr>
     <th>POS</th>
-    <th colspan="2">Team Name</th>
+    <th id="team-name-label" colspan="2">Team Name</th>
     <th>MP</th>
     <th>W</th>
     <th>D</th>
@@ -12,28 +12,28 @@
     <th>P</th>
   </tr>
   <tr *ngFor="let team of table">
-    <td>{{team.position}}</td>
-    <td><a href="#" [routerLink]="['/team', team.teamId]"><img src={{team.teamCrestUrl}} height="40"></a></td>
-    <td><a href="#" [routerLink]="['/team', team.teamId]">{{team.teamName}}</a></td>
-    <td>{{team.matchPlayed}}</td>
-    <td>{{team.wins}}</td>
-    <td>{{team.draws}}</td>
-    <td>{{team.loses}}</td>
-    <td>{{team.goalsFor}}</td>
-    <td>{{team.goalsAgainst}}</td>
-    <td>{{team.goalsDifference}}</td>
-    <td>{{team.points}}</td>
+    <td class="table-num">{{team.position}}</td>
+    <td id="team-crest"><a href="#" [routerLink]="['/team', team.teamId]"><img src={{team.teamCrestUrl}} onError="this.src='assets/img/unknown-team-crest.png';" height="40"></a></td>
+    <td id="team-name"><a href="#" [routerLink]="['/team', team.teamId]">{{team.teamName}}</a></td>
+    <td class="table-num">{{team.matchPlayed}}</td>
+    <td class="table-num">{{team.wins}}</td>
+    <td class="table-num">{{team.draws}}</td>
+    <td class="table-num">{{team.loses}}</td>
+    <td class="table-num">{{team.goalsFor}}</td>
+    <td class="table-num">{{team.goalsAgainst}}</td>
+    <td class="table-num">{{team.goalsDifference}}</td>
+    <td class="table-num" id="team-points">{{team.points}}</td>
   </tr>
 </table>
 
 <div *ngIf="leagueIdsWithGroupTables.includes(leagueId)">
-  <table *ngFor="let standing of groupTables">
+  <table class="table-striped" *ngFor="let standing of groupTables">
     <tr>
       <th colspan="11">{{standing.groupName}}</th>
     </tr>
     <tr>
       <th>POS</th>
-      <th colspan="2">Team Name</th>
+      <th id="team-name-label" colspan="2">Team Name</th>
       <th>MP</th>
       <th>W</th>
       <th>D</th>
@@ -44,17 +44,17 @@
       <th>P</th>
     </tr>
     <tr *ngFor="let team of standing.table">
-      <td>{{team.position}}</td>
-      <td><a href="#" [routerLink]="['/team', team.teamId]"><img src={{team.teamCrestUrl}} height="40"></a></td>
-      <td><a href="#" [routerLink]="['/team', team.teamId]">{{team.teamName}}</a></td>
-      <td>{{team.matchPlayed}}</td>
-      <td>{{team.wins}}</td>
-      <td>{{team.draws}}</td>
-      <td>{{team.loses}}</td>
-      <td>{{team.goalsFor}}</td>
-      <td>{{team.goalsAgainst}}</td>
-      <td>{{team.goalsDifference}}</td>
-      <td>{{team.points}}</td>
+      <td class="table-num">{{team.position}}</td>
+      <td id="team-crest"><a href="#" [routerLink]="['/team', team.teamId]"><img src={{team.teamCrestUrl}} onError="this.src='assets/img/unknown-team-crest.png';" height="40"></a></td>
+      <td id="team-name"><a href="#" [routerLink]="['/team', team.teamId]">{{team.teamName}}</a></td>
+      <td class="table-num">{{team.matchPlayed}}</td>
+      <td class="table-num">{{team.wins}}</td>
+      <td class="table-num">{{team.draws}}</td>
+      <td class="table-num">{{team.loses}}</td>
+      <td class="table-num">{{team.goalsFor}}</td>
+      <td class="table-num">{{team.goalsAgainst}}</td>
+      <td class="table-num">{{team.goalsDifference}}</td>
+      <td class="table-num" id="team-points">{{team.points}}</td>
     </tr>
   </table>
 </div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LeagueService, LeagueInfo } from './league.service';
 import { LeagueScorer } from './league-scorer';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-league',
@@ -24,5 +25,20 @@ export class LeagueComponent implements OnInit {
     this.leagueInfo = this.leagueService.fetchLeagueInfo(this.leagueId);
     this.topScorers = this.leagueService.fetchTopScorers(this.leagueId);
     this.router.navigate(['/league', this.leagueId, 'league-table']);
+    $('#span-league-table').css(
+      {"color": "#FFFFFF",
+      "background-color": "#343A40"}
+    )
+  }
+
+  spanLeagueClick(spanName: string){
+    $('.league-a').css(
+      {"color": "rgba(0,0,0,.9)",
+      "background-color": "#FFFFFF"}
+    )
+    $('#span-league-' + spanName).css(
+      {"color": "#FFFFFF",
+      "background-color": "#343A40"}
+    )
   }
 }

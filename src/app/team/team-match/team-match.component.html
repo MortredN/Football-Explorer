@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-6">
-      <table>
+      <table class="table">
         <thead>
           <tr>
             <th colspan="3">Last matches</th>
@@ -8,19 +8,19 @@
         </thead>
         <tbody class="navigate-tbody" *ngFor="let match of finishedMatches" (click)="navigateToMatch(match.matchId)">
           <tr>
-            <td rowspan="2"><img src={{match.opponentCrestUrl}} height="80"></td>
-            <td>{{match.opponentName}}</td>
-            <td>{{match.ftHomeScore}} - {{match.ftAwayScore}} ({{match.homeOrAway}})</td>
+            <td rowspan="2"><img src={{match.opponentCrestUrl}} onError="this.src='assets/img/unknown-team-crest.png';" height="80"></td>
+            <td class="left-cell">{{match.opponentName}}</td>
+            <td class="right-cell">{{match.ftHomeScore}} - {{match.ftAwayScore}} ({{match.homeOrAway}})</td>
           </tr>
           <tr>
-            <td>{{match.competitionName}}</td>
-            <td>{{match.result}} - {{match.date}}</td>
+            <td class="left-cell">{{match.competitionName}}</td>
+            <td class="right-cell">{{match.result}} - {{match.date}}</td>
           </tr>
         </tbody>
       </table>
     </div>
     <div class="col-md-6">
-      <table>
+      <table class="table">
         <thead>
           <tr>
             <th colspan="3">Live and upcoming matches</th>
@@ -28,13 +28,13 @@
         </thead>
         <tbody class="navigate-tbody" *ngFor="let match of liveAndScheduledMatches" (click)="navigateToMatch(match.matchId)">
           <tr>
-            <td rowspan="2"><img src={{match.opponentCrestUrl}} height="80"></td>
-            <td>{{match.opponentName}}</td>
-            <td>{{match.time}}</td>
+            <td rowspan="2"><img src={{match.opponentCrestUrl}} onError="this.src='assets/img/unknown-team-crest.png';" height="80"></td>
+            <td class="left-cell">{{match.opponentName}}</td>
+            <td class="right-cell">{{match.time}}</td>
           </tr>
           <tr>
-            <td>{{match.competitionName}}</td>
-            <td>{{match.date}}</td>
+            <td class="left-cell">{{match.competitionName}}</td>
+            <td class="right-cell">{{match.date}}</td>
           </tr>
         </tbody>
       </table>

@@ -1,32 +1,89 @@
-<div class="row">
-  <div class="col-md-3">
+<div id="main" class="row">
+  <div class="col-lg-3">
     <app-leaguenav></app-leaguenav>
   </div>
-  <div class="col-md-9" *ngFor="let info of matchInfo">
-    <table>
-      <tr>
-        <td class="navigateTeam" [routerLink]="['/team', info.homeTeamId]"><img src={{info.homeTeamCrestUrl}} height="160"></td>
-        <td *ngIf="info.status == 'SCHEDULED'"><h1>VS</h1></td>
-        <td *ngIf="info.status != 'SCHEDULED'"><h1>{{info.ftHomeScore}} - {{info.ftAwayScore}}</h1></td>
-        <td class="navigateTeam" [routerLink]="['/team', info.awayTeamId]"><img src={{info.awayTeamCrestUrl}} height="160"></td>
-      </tr>
-      <tr>
-        <td class="navigateTeam" [routerLink]="['/team', info.homeTeamId]">
-          <h1>{{info.homeTeamName}}</h1>
-          <table><tr><td *ngFor="let homeResult of info.homeRecentPerformance" class="result-{{homeResult}}">{{homeResult}}</td></tr></table>
-        </td>
-        <td>
-          <h3>{{info.time}}</h3>
-          <h4>{{info.date}}</h4>
-          <h5>{{info.competitionName}}</h5>
-        </td>
-        <td class="navigateTeam" [routerLink]="['/team', info.awayTeamId]">
-          <h1>{{info.awayTeamName}}</h1>
-          <table><tr><td *ngFor="let awayResult of info.awayRecentPerformance" class="result-{{awayResult}}">{{awayResult}}</td></tr></table>
-        </td>
-      </tr>
-    </table>
-    <table>
+  <div id="match-div" class="col-lg-9" *ngFor="let info of matchInfo">
+    <div id="match-info-table-container">
+      <table id="match-info-table" class="hidden-md hidden-sm hidden-xs">
+        <tr class="row">
+          <td class="col-md-5 navigateTeam" [routerLink]="['/team', info.homeTeamId]">
+            <img src={{info.homeTeamCrestUrl}} onError="this.src='assets/img/unknown-team-crest.png';" height="160">
+          </td>
+          <td class="col-md-2 match-cell" *ngIf="info.status == 'SCHEDULED'"><h1>VS</h1></td>
+          <td class="col-md-2 match-cell" *ngIf="info.status != 'SCHEDULED'"><h1>{{info.ftHomeScore}} - {{info.ftAwayScore}}</h1></td>
+          <td class="col-md-5 navigateTeam" [routerLink]="['/team', info.awayTeamId]">
+            <img src={{info.awayTeamCrestUrl}} onError="this.src='assets/img/unknown-team-crest.png';" height="160">
+          </td>
+        </tr>
+        <tr class="row">
+          <td class="col-md-5 navigateTeam match-cell" [routerLink]="['/team', info.homeTeamId]">
+            <h1>{{info.homeTeamName}}</h1>
+            <div class="result-container">
+              <table class="result-table">
+                <tr><td *ngFor="let homeResult of info.homeRecentPerformance" class="result-{{homeResult}}">{{homeResult}}</td></tr>
+              </table>
+            </div>
+          </td>
+          <td class="col-md-2 match-cell">
+            <h3>{{info.time}}</h3>
+            <h4>{{info.date}}</h4>
+            <h5>{{info.competitionName}}</h5>
+          </td>
+          <td class="col-md-5 navigateTeam match-cell" [routerLink]="['/team', info.awayTeamId]">
+            <h1>{{info.awayTeamName}}</h1>
+            <div class="result-container">
+              <table class="result-table">
+                <tr><td *ngFor="let awayResult of info.awayRecentPerformance" class="result-{{awayResult}}">{{awayResult}}</td></tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <table id="match-info-table" class="hidden-lg">
+        <tr>
+          <td class="navigateTeam" [routerLink]="['/team', info.homeTeamId]">
+            <img src={{info.homeTeamCrestUrl}} onError="this.src='assets/img/unknown-team-crest.png';" height="160">
+          </td>
+        </tr>
+        <tr>
+          <td class="navigateTeam" [routerLink]="['/team', info.homeTeamId]">
+            <h1>{{info.homeTeamName}}</h1>
+            <div class="result-container">
+              <table class="result-table">
+                <tr><td *ngFor="let homeResult of info.homeRecentPerformance" class="result-{{homeResult}}">{{homeResult}}</td></tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td *ngIf="info.status == 'SCHEDULED'"><h1>VS</h1></td>
+          <td *ngIf="info.status != 'SCHEDULED'"><h1>{{info.ftHomeScore}} - {{info.ftAwayScore}}</h1></td>
+        </tr>
+        <tr>
+          <td class="navigateTeam" [routerLink]="['/team', info.awayTeamId]">
+            <img src={{info.awayTeamCrestUrl}} onError="this.src='assets/img/unknown-team-crest.png';" height="160">
+          </td>
+        </tr>
+        <tr>
+          <td class="navigateTeam" [routerLink]="['/team', info.awayTeamId]">
+            <h1>{{info.awayTeamName}}</h1>
+            <div class="result-container">
+              <table class="result-table">
+                <tr><td *ngFor="let awayResult of info.awayRecentPerformance" class="result-{{awayResult}}">{{awayResult}}</td></tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3>{{info.time}}</h3>
+            <h4>{{info.date}}</h4>
+            <h5>{{info.competitionName}}</h5>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <table id="h2h-stats-table" class="table">
       <tr>
         <th colspan="3">HEAD TO HEAD STATS</th>
       </tr>
@@ -45,19 +102,19 @@
         </td>
       </tr>
     </table>
-    <table>
+    <table id="h2h-matches-table" class="table">
       <tr>
         <th colspan="7">HEAD TO HEAD MATCHES THIS SEASON</th>
       </tr>
-      <tr *ngFor="let h2hMatch of info.h2hMatches">
-        <td>{{h2hMatch.h2hTime}}</td>
-        <td><img src={{h2hMatch.h2hHomeTeamCrestUrl}} height="30"></td>
-        <td>{{h2hMatch.h2hHomeTeamName}}</td>
+      <tr class="h2h-row" *ngFor="let h2hMatch of info.h2hMatches">
+        <td id="time-cell">{{h2hMatch.h2hTime}}</td>
+        <td id="home-team-cell">{{h2hMatch.h2hHomeTeamName}}</td>
+        <td><img src={{h2hMatch.h2hHomeTeamCrestUrl}} onError="this.src='assets/img/unknown-team-crest.png';" height="30"></td>
         <td *ngIf="h2hMatch.h2hStatus == 'SCHEDULED'">VS</td>
-        <td *ngIf="h2hMatch.h2hStatus != 'SCHEDULED'">{{h2hMatch.h2hFtHomeScore}} - {{h2hMatch.h2hFtAwayScore}}</td>
-        <td>{{h2hMatch.h2hAwayTeamName}}</td>
-        <td><img src={{h2hMatch.h2hAwayTeamCrestUrl}} height="30"></td>
-        <td>{{h2hMatch.h2hDate}}</td>
+        <td id="score-cell" *ngIf="h2hMatch.h2hStatus != 'SCHEDULED'">{{h2hMatch.h2hFtHomeScore}} - {{h2hMatch.h2hFtAwayScore}}</td>
+        <td><img src={{h2hMatch.h2hAwayTeamCrestUrl}} onError="this.src='assets/img/unknown-team-crest.png';" height="30"></td>
+        <td id="away-team-cell">{{h2hMatch.h2hAwayTeamName}}</td>
+        <td id="date-cell">{{h2hMatch.h2hDate}}</td>
       </tr>
     </table>
   </div>
