@@ -157,7 +157,6 @@ export class TeamService {
     
     forkJoin(obsForkJoinsArray).subscribe(
       res => {
-        console.log(res);
         for(let resInd = 0; resInd < obsForkJoinsArray.length - 1; resInd++) {
           let resTeams: any[] = res[resInd]["teams"];
           for(let ind = 0; ind < resTeams.length; ind++) {
@@ -251,7 +250,6 @@ export class TeamService {
     
     forkJoin(obsForkJoinsArray).subscribe(
       res => {
-        console.log(res);
         for(let resInd = 0; resInd < obsForkJoinsArray.length - 2; resInd++) {
           let resTeams: any[] = res[resInd]["teams"];
           for(let ind = 0; ind < resTeams.length; ind++) {

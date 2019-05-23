@@ -156,7 +156,6 @@ export class HomeService {
         }
       }
     )
-    console.log(homePageDates);
     return homePageDates;
   }
 
