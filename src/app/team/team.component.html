@@ -17,14 +17,14 @@
       </table>
     </div>
     <div class="row">
-      <a class="team-a col-4" href="#" [routerLink]="['team-squad']">
-        <span class="team-span" id="league-table-span">Squad</span>
+      <a id="span-team-squad" class="team-a col-4" href="#" [routerLink]="['team-squad']" (click)="spanTeamClick('squad')">
+        <span class="team-span">Squad</span>
       </a>
-      <a class="team-a col-4" href="#" [routerLink]="['team-position']">
-        <span class="team-span" id="league-match-span">Position</span>
+      <a id="span-team-position" class="team-a col-4" href="#" [routerLink]="['team-position']" (click)="spanTeamClick('position')">
+        <span class="team-span">Position</span>
       </a>
-      <a class="team-a col-4" href="#" [routerLink]="['team-match']">
-        <span class="team-span" id="league-match-span">Matches</span>
+      <a id="span-team-match" class="team-a col-4" href="#" [routerLink]="['team-match']" (click)="spanTeamClick('match')">
+        <span class="team-span">Matches</span>
       </a>
     </div>
     <router-outlet></router-outlet>

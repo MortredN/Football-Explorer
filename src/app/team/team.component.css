@@ -59,9 +59,18 @@
 
 .team-a{
     color: rgba(0,0,0,.9);
+    background-color: #FFFFFF;
     border: 2px solid rgba(0,0,0,.9);
     padding: 5px, 0;
     margin-bottom: 15px;
+    -webkit-transition: background-color 0.4s, color 0.4s;
+    -moz-transition: background-color 0.4s, color 0.4s;
+    -o-transition: background-color 0.4s, color 0.4s;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+.team-a:hover{
+    text-decoration: none;
 }
 
 .team-span{

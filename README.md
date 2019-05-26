@@ -25,3 +25,8 @@ Run `ng serve -o` to immediately open the homepage after the compiler finishes.
 ## Built files to upload
 
 The built artifacts is stored in the `dist/` directory, which is ready to be uploaded to a cloud service / web hosting server.
+
+
+## Heroku
+
+The website built using this Angular application can be accessed through this Heroku-developed URL: `https://football-explorer.herokuapp.com/`
