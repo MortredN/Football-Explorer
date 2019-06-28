@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TeamService } from '../team.service';
-import { TeamPosition } from '../team-position';
+import { TeamPosition } from './team-position';
 
 @Component({
   selector: 'app-team-position',

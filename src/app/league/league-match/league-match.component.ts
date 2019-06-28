@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LeagueService} from '../league.service';
-import { LeagueMatch } from '../league-match';
+import { LeagueMatch } from './league-match';
 import { Router } from '@angular/router';
 
 

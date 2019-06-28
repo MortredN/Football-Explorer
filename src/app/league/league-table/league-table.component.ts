@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LeagueService, LeagueGroupTables } from '../league.service';
-import { LeagueTable } from '../league-table';
+import { LeagueTable } from './league-table';
 
 @Component({
   selector: 'app-league-table',

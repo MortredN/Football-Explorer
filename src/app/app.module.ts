@@ -20,6 +20,7 @@ import { TeamSquadComponent } from './team/team-squad/team-squad.component';
 import { MatchComponent } from './match/match.component';
 import { MatchService } from './match/match.service';
 import { HomeService } from './home/home.service';
+import { TokenService } from './token.service';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { HomeService } from './home/home.service';
     HttpClientModule
   ],
   providers: [
+    TokenService,
     CompetitionService,
     HomeService,
     LeagueService,

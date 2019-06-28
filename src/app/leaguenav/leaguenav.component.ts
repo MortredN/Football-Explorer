@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CompetitionService } from '../competition.service';
-import { Competition } from '../competition';
+import { CompetitionService, Competition } from '../competition.service';
 
 @Component({
   selector: 'app-leaguenav',

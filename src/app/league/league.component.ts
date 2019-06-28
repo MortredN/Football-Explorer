@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { LeagueService, LeagueInfo } from './league.service';
-import { LeagueScorer } from './league-scorer';
+import { LeagueService, LeagueInfo, LeagueScorer } from './league.service';
 import * as $ from 'jquery';
 
 @Component({
